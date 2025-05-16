@@ -10,7 +10,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
-[ no ] Feature 5 - Add an Additional Interactive Drop-down
+[ yes ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
@@ -21,37 +21,73 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About [Alemu]</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">The Terminator</option>
+          <option value="movie2">Seven</option>
+          <option value="movie3">The Matrix</option>
+          <option value="movie4">The Good, the Bad, and the Ugly</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
+    <img
+      id="movie-pic"
+      src="https://djmzubtjl6upi.cloudfront.net/wp-content/uploads/sites/3/2018/03/Roxy-Cinema-Tribeca1.jpg"
+      width="50"
+      height="100"
+    />
     <div id="movie-result"></div>
+
     <hr />
+
     <!-- Book Question -->
     <form id="book-form">
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Scythe</option>
+          <option value="book2">The Lightning Thief</option>
+          <option value="book3">Enders Game</option>
+          <option value="book4">The Phantom Tollbooth</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
+    <img
+      id="book-pic"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMCG7zcg-W_QsL1Dus9eJMvmvM-2_51112Zg&s"
+      width="50"
+      height="100"
+    />
     <div id="book-result"></div>
+
+    <!-- Activity Question -->
+    <form id="activity-form">
+      <label>
+        📖 What is my favorite activity?
+        <select id="activity-answer">
+          <option value="activity1">Dancing</option>
+          <option value="activity2">Watching Sports</option>
+          <option value="activity3">Exploring Nature</option>
+          <option value="activity4">I love them all</option>
+        </select>
+      </label>
+      <button type="submit">Check activity Answer</button>
+    </form>
+    <img
+      id="activity-pic"
+      src="https://img.freepik.com/premium-vector/diverse-group-people-enjoying-outdoor-activities-like-biking-playing-sports-walking_1294240-84025.jpg"
+      width="50"
+      height="100"
+    />
+    <div id="activity-result"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
@@ -61,7 +97,7 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie2") {
           $("#movie-result").text("YESSSS!");
         } else {
           $("#movie-result").text("Try Again!");
@@ -75,12 +111,56 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book3") {
           $("#book-result").text("YESSSS!");
         } else {
           $("#book-result").text("Try Again!");
         }
       });
+
+      //Activity Question jQuery Code
+      $("#activity-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#activity-answer");
+        var answer = $answer.val();
+
+        if (answer === "activity4") {
+          $("#activity-result").text("YESSSS!");
+        } else {
+          $("#activity-result").text("Try Again!");
+        }
+      });
+
+      $("#movie-pic").slideDown(1000);
+
+      $("#movie-pic").animate(
+        {
+          width: "200px",
+          marginLeft: "100px",
+        },
+        1000
+      );
+
+      $("#book-pic").slideDown(1000);
+
+      $("#book-pic").animate(
+        {
+          width: "200px",
+          marginLeft: "100px",
+        },
+        1000
+      );
+
+      $("#activiy-pic").slideDown(1000);
+
+      $("#activity-pic").animate(
+        {
+          width: "200px",
+          marginLeft: "100px",
+        },
+        1000
+      );
     </script>
   </body>
 

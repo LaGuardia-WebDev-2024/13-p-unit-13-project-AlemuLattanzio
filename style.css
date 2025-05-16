@@ -16,7 +16,59 @@
   margin-bottom: 20px;
 }
 
+#activity-result {
+  background: rgb(100, 200, 205);
+  border: 5px solid black;
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+  
 hr {
   height: 5px;
   background-color: black;
+}
+h1 {
+ background-color:blue;
+   color: green;
+}
+
+#movie-form {
+  color:red
+}
+
+#book-form {
+  color:green
+}
+
+#movie-answer {
+  color:red
+}
+
+#book-answer {
+  color:green
+}
+
+#activity-form {
+  color: orange
+}
+
+#activity-answer {
+  color: orange
+}
+
+#movie-pic {
+  border: 5px solid black;
+  width: 200px
+}
+
+#book-pic {
+  border: 5px solid black;
+  width: 200px
+}
+
+#activity-pic { 
+border: 5px solid black;
+  width: 200px
 }
